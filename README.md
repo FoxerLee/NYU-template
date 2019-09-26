@@ -76,6 +76,10 @@ Written by [Yuan Li](https://github.com/FoxerLee), idea comes from [homework-tem
 
 Feel free to fork it, and make a new pull request!
 
+### Download
+
+[Link](https://github.com/FoxerLee/NYU-template/releases)
+
 ### Who am I?
 
 - A student of Computer Science and Engineering, NYU Tandon School of Engineering.
