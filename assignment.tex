@@ -1,0 +1,242 @@
+\documentclass{article}
+
+\usepackage{indentfirst}
+\usepackage{anysize}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{amsmath}
+\usepackage{CJK}
+\usepackage{xcolor} 
+\usepackage{colortbl,booktabs} 
+\usepackage{multirow}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  language=Octave, 
+  basicstyle=\footnotesize,           
+  numbers=left,                   
+  numberstyle=\tiny\color{gray},  
+  stepnumber=2,                   
+  numbersep=5pt,                  
+  backgroundcolor=\color{white},      
+  showspaces=false,               
+  showstringspaces=false,         
+  showtabs=false,                 
+  frame=single,                   
+  rulecolor=\color{black},        
+  tabsize=2,                      
+  captionpos=b,                   
+  breaklines=true,                
+  breakatwhitespace=false,        
+  title=\lstname,                  
+  keywordstyle=\color{blue},          
+  commentstyle=\color{dkgreen},       
+  stringstyle=\color{mauve},         
+  escapeinside={\%*}{*)},            
+  morekeywords={*,...}        
+}
+
+\linespread{1.2}
+
+
+\marginsize{2.5cm}{2.5cm}{1cm}{1cm}
+\setlength{\parindent}{2em}
+
+\newcolumntype{L}[1]{>{\vspace{0.5em}\begin{minipage}{#1}\raggedright\let\newline\\
+\arraybackslash\hspace{0pt}}m{#1}<{\end{minipage}\vspace{0.5em}}}
+\newcolumntype{R}[1]{>{\vspace{0.5em}\begin{minipage}{#1}\raggedleft\let\newline\\
+\arraybackslash\hspace{0pt}}m{#1}<{\end{minipage}\vspace{0.5em}}}
+\newcolumntype{C}[1]{>{\vspace{0.5em}\begin{minipage}{#1}\centering\let\newline\\
+\arraybackslash\hspace{0pt}}m{#1}<{\end{minipage}\vspace{0.5em}}}
+
+\lhead{\NYUpng}
+\chead{\bfseries \semester}
+\rhead{\bfseries \coursenumber}
+\lfoot{\itshape \univ}
+\cfoot{\thepage}
+\rfoot{\itshape \department}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\def\NYUpng{}
+\def\semester{}
+\def\coursenumber{}
+\def\univ{}
+\def\department{}
+\def\hwname{}
+\def\studentname{}
+\def\id{}
+\def\email{}
+
+\newcommand{\course}[3]{
+	\def\NYUpng{#1}
+	\def\semester{#2}
+	\def\coursenumber{#3}
+}
+
+\newcommand{\university}[2]{
+	\def\univ{#1}
+	\def\department{#2}
+}
+
+\newcommand{\assignment}[4]{
+	\def\hwname{#1}
+	\def\studentname{#2}
+	\def\id{#3}
+	\def\email{#4}
+}
+
+
+\newcommand{\newsectionone}[1]{
+	{\large\textbf{#1}}
+	\vspace{1em}
+}
+
+\newcommand{\newsectiontwo}[1]{
+    \textbf{#1}
+    \vspace{0.5em}
+}
+
+\newenvironment{answer}{
+	\noindent
+	\textit{Answer:}
+	
+}{\vspace{1em}}
+
+\newcommand{\oldmaketitle}{\maketitle}
+\renewcommand{\maketitle}{
+\begin{center}
+	\LARGE\textbf{\hwname}	
+	\vspace{1em}
+	
+	\large \textit{Name:} \studentname
+	
+	\large \textit{ID:} \id 
+	
+	\large \textit{Email:} \email
+\end{center}
+
+\vspace{2em}
+	
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BE CAREFUL BEFORE YOU CHANGE THE CODE ABOVE!
+% Written by Yuan Li, 09/25/2019
+% Contact me via foxerlee1@gmail.com, if you have any question :)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+
+\course 
+{\setlength{\unitlength}{1mm}
+        \begin{picture}(0,0)
+        \put(0,0){\includegraphics[width=0.7cm]{img/NYU.png}} 
+        \end{picture}
+} % University's logo
+{Fall 2019} % semester
+{CS-GY 6923} % course number
+
+\university
+{New York University} % university
+{Tandon school of Engineering} % department
+
+\assignment
+{Homework} % assignment name
+{Foxerlee} % student name
+{N12345678} % student ID
+{foxerlee1@gmail.com} % student email
+
+\maketitle
+
+\newsectionone{1. Section}
+
+\newsectiontwo{(1) Subsection}
+
+\begin{answer}
+	Answer question here! 啦啦啦啦
+\end{answer}
+
+
+\newsectiontwo{(2) Math}
+
+\begin{answer}
+
+Equation:
+
+\begin{equation}\nonumber
+\begin{aligned}
+	E_{in}(w) &= \frac{1}{10}\sum_{i=1}^{10}(\hat{y}_i + y_i)^2\\
+	&= \frac{1}{N}||Xw-y||_2^2
+\end{aligned}
+\end{equation}   
+
+
+Matrix:
+
+\begin{equation}\nonumber
+\begin{aligned}
+	\left[\begin{array}{cccc} 
+    0.7 & 55 & 1 & 0\\      
+    1.3 & 65 & 0 & 1\\
+    1.6 & 70 & 0 & 1
+  \end{array}\right]
+\end{aligned}
+\end{equation}
+
+
+
+\end{answer}
+
+
+
+
+
+\newsectiontwo{(3) Image}
+
+\begin{answer}
+
+\begin{figure}[!ht]
+\begin{center}
+  \includegraphics[width = 0.6\textwidth]{img/NYU.png}	
+\end{center}
+\end{figure}
+
+\end{answer}
+
+
+
+\newsectiontwo{(4) Code}
+
+\begin{answer}
+
+\begin{lstlisting}[title=Python code, frame=shadowbox]
+import numpy as np
+x = np.array([137, 135, 127, 122, 120, 118, 118, 117, 117, 114])            
+y = np.array([28540, 40133, 39900, 0, 0, 42050, 43220, 39565, 40400, 54506])
+
+A = np.vstack([x, np.ones(len(x))]).T                                       
+m, c = np.linalg.lstsq(A, y, rcond=None)[0]  
+                               
+\end{lstlisting}
+
+\end{answer}
+
+
+\newpage
+
+\end{CJK}
+\end{document}
