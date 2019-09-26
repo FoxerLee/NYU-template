@@ -18,6 +18,35 @@ Written by [Yuan Li](https://github.com/FoxerLee), idea comes from [homework-tem
   \end{answer}
   ```
 
+- How to add Code
+
+  ```latex
+  \begin{lstlisting}[title=Python code, frame=shadowbox]
+  import numpy as np
+  x = np.array([137, 135, 127, 122, 120, 118, 118, 117, 117, 114])            
+  y = np.array([28540, 40133, 39900, 0, 0, 42050, 43220, 39565, 40400, 54506])
+  
+  A = np.vstack([x, np.ones(len(x))]).T                                       
+  m, c = np.linalg.lstsq(A, y, rcond=None)[0]  
+                                 
+  \end{lstlisting}
+  ```
+
+- `\image` Add a image
+
+  ```latex
+  \image{0.4}{img/NYU.png} % para1 -- size, para2 -- image source
+  ```
+
+- `equ` Where to write equation
+
+  ```latex
+  \begin{equ}
+  	E_{in}(w) &= \frac{1}{10}\sum_{i=1}^{10}(\hat{y}_i + y_i)^2\\
+  	&= \frac{1}{N}||Xw-y||_2^2
+  \end{equ}
+  ```
+
 - Other basic information
 
   ```latex
@@ -39,41 +68,6 @@ Written by [Yuan Li](https://github.com/FoxerLee), idea comes from [homework-tem
   {Foxerlee} % student name
   {N12345678} % student ID
   {foxerlee1@gmail.com} % student email
-  ```
-
-- How to add Code
-
-  ```latex
-  \begin{lstlisting}[title=Python code, frame=shadowbox]
-  import numpy as np
-  x = np.array([137, 135, 127, 122, 120, 118, 118, 117, 117, 114])            
-  y = np.array([28540, 40133, 39900, 0, 0, 42050, 43220, 39565, 40400, 54506])
-  
-  A = np.vstack([x, np.ones(len(x))]).T                                       
-  m, c = np.linalg.lstsq(A, y, rcond=None)[0]  
-                                 
-  \end{lstlisting}
-  ```
-
-- How to add Image
-
-  ```latex
-  \begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[width = 0.6\textwidth]{img/NYU.png}	
-  \end{center}
-  \end{figure}
-  ```
-
-- How to add Equation
-
-  ```latex
-  \begin{equation}\nonumber
-  \begin{aligned}
-  	E_{in}(w) &= \frac{1}{10}\sum_{i=1}^{10}(\hat{y}_i + y_i)^2\\
-  	&= \frac{1}{N}||Xw-y||_2^2
-  \end{aligned}
-  \end{equation} 
   ```
 
 - Chinese is supported.

@@ -108,11 +108,27 @@
     \vspace{0.5em}
 }
 
+\newcommand{\image}[2]{
+	\begin{figure}[!ht]
+	\begin{center}
+ 		 \includegraphics[width = #1\textwidth]{#2}	
+	\end{center}
+	\end{figure}
+}
+
 \newenvironment{answer}{
 	\noindent
 	\textit{Answer:}
 	
 }{\vspace{1em}}
+
+\newenvironment{equ}{
+	\begin{equation}\nonumber
+	\begin{aligned}}{\end{aligned}
+					 \end{equation} }
+					 
+		 
+\newenvironment{codes}{\begin{lstlisting}[frame=shadowbox]}{\end{lstlisting}}
 
 \newcommand{\oldmaketitle}{\maketitle}
 \renewcommand{\maketitle}{
@@ -177,25 +193,22 @@
 
 Equation:
 
-\begin{equation}\nonumber
-\begin{aligned}
+\begin{equ}
 	E_{in}(w) &= \frac{1}{10}\sum_{i=1}^{10}(\hat{y}_i + y_i)^2\\
 	&= \frac{1}{N}||Xw-y||_2^2
-\end{aligned}
-\end{equation}   
+\end{equ}
+	  
 
 
 Matrix:
 
-\begin{equation}\nonumber
-\begin{aligned}
+\begin{equ}
 	\left[\begin{array}{cccc} 
     0.7 & 55 & 1 & 0\\      
     1.3 & 65 & 0 & 1\\
     1.6 & 70 & 0 & 1
   \end{array}\right]
-\end{aligned}
-\end{equation}
+\end{equ}
 
 
 
@@ -209,11 +222,7 @@ Matrix:
 
 \begin{answer}
 
-\begin{figure}[!ht]
-\begin{center}
-  \includegraphics[width = 0.6\textwidth]{img/NYU.png}	
-\end{center}
-\end{figure}
+\image{0.4}{img/NYU.png} % para1 -- size, para2 -- image source
 
 \end{answer}
 
@@ -223,14 +232,13 @@ Matrix:
 
 \begin{answer}
 
-\begin{lstlisting}[title=Python code, frame=shadowbox]
+\begin{lstlisting}[frame=shadowbox]
 import numpy as np
 x = np.array([137, 135, 127, 122, 120, 118, 118, 117, 117, 114])            
 y = np.array([28540, 40133, 39900, 0, 0, 42050, 43220, 39565, 40400, 54506])
 
 A = np.vstack([x, np.ones(len(x))]).T                                       
 m, c = np.linalg.lstsq(A, y, rcond=None)[0]  
-                               
 \end{lstlisting}
 
 \end{answer}
