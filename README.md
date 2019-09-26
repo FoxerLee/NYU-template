@@ -1,6 +1,6 @@
-# $\LaTeX{}$ Template for NYU
+# LaTeX Template for NYU
 
-A sample template for NYU students~
+A simple latex template for NYU students~
 
 Written by [Yuan Li](https://github.com/FoxerLee), idea comes from [homework-template](https://github.com/SXKDZ/homework-template).
 
